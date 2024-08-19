@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://vanshgupta4545:25July2003@cluster0.qxdgu.mongodb
   // ... other middleware and route handling
   
   const PORT = 8000;
-  app.listen(PORT, () => {
+  app.listen(process.env.port || PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
   });
   
