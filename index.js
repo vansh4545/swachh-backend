@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://vanshgupta4545:25July2003@cluster0.qxdgu.mongodb
     console.log('Connected!!')
   });
 
-  app.use(cors({ credentials: true, origin: ' https://swachh-tracker.vercel.app/' }));
+  app.use(cors({ credentials: true, origin: 'https://swachh-tracker.vercel.app/' }));
   
   // ... other middleware and route handling
   
