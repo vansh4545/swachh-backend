@@ -57,7 +57,7 @@ export const Login = async (req, res, next) => {
           return res.json({message:'Incorrect password or email' }) 
         }
         const accesstoken = jwt.sign(user.toJSON(),process.env.A_S_K,{expiresIn:'60m'});
-        res.status(201).json({user,accesstoken:accesstoken, message: "User logged in successfully", success: true });
+        res.status(201).json({user:user,accesstoken:accesstoken, message: "User logged in successfully", success: true });
       } else if(admin) {
         const auth = await bcrypt.compare(password, admin.password)
         if (!auth) {
